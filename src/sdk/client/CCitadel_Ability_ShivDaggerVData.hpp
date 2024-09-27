@@ -1,0 +1,33 @@
+#pragma once
+#include "client/CCitadelModifier.hpp"
+#include "client/CitadelAbilityVData.hpp"
+#include "resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
+#include <cstdint>
+
+// /////////////////////////////////////////////////////////////
+// Module: client
+// Created using source2gen - github.com/neverlosecc/source2gen
+// /////////////////////////////////////////////////////////////
+
+namespace source2sdk::client
+{
+	// Alignment: 8
+	// Size: 0x1820
+	// Has VTable
+	// 
+	// MGetKV3ClassDefaults
+	class CCitadel_Ability_ShivDaggerVData : public client::CitadelAbilityVData
+	{
+	public:
+		// MPropertyStartGroup "Modifiers"
+		CEmbeddedSubclass<client::CCitadelModifier> m_DamageDebuffModifier; // 0x1540		
+		CEmbeddedSubclass<client::CCitadelModifier> m_SlowDebuffModifier; // 0x1550		
+		// MPropertyStartGroup "Visuals"
+		CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DaggerStuckParticle; // 0x1560		
+		CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DaggerImpactParticle; // 0x1640		
+		CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DaggerExplodeParticle; // 0x1720		
+		// MPropertyStartGroup "Sounds"
+		CSoundEventName m_strDaggerHitSound; // 0x1800		
+		CSoundEventName m_strDaggerExplodeSound; // 0x1810		
+	};
+};
